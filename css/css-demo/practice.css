@@ -12,3 +12,10 @@
 .accomplishments{
 	font-size: .8em;
 }
+
+.job:hover{
+	background-color: #ff0000;
+}
+.job > h3 {
+	color: white;
+}

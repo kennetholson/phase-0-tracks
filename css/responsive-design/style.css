@@ -1,15 +1,17 @@
 body{
-  width: 960px;
+  max-width: 960px
 }
 
 #external-links{
-  width: 200px;
+  width: 20%;
   display: inline-block;
   vertical-align: top;
+  padding-right: 20px;
+  min-width: 35px;
 }
 
 main{
-  width: 756px;
+  width: 75%;
   display: inline-block;
   vertical-align: top;
 }
@@ -25,14 +27,6 @@ cite {
   margin-top: 10px;
 }
 
-#external-links ul {
-  list-style-type: none;
-  padding-left: 0px;
-}
-
-/* you're welcome to edit the
-image, figure, and figcaption CSS if you'd like, 
-but it's optional! */
 img {
   width: 100%;
 }
@@ -45,4 +39,15 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    text-align: center;
+    }
+  main{
+    display: block;
+    width: 100%
+
+  }
 }

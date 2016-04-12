@@ -1,0 +1,40 @@
+Elevator
+-Ask owner where they would like to go
+
+	if response = home 
+		press 5
+	elsif response = street
+		press 1
+	elsif response = garage
+		press B
+	else
+		press number told
+
+
+Fold Laundry
+
+-Until clothes in hamper = 0
+	-Take item of clothing out of hamper		
+	-Lay it of clothing flat
+		-If pants 
+			-Fold in half vertically
+			-Fold in in thirds horizontally
+			-Place in dresser drawer
+		elsif t-shirt
+			-place upside down
+			-fold vertically 1/3 from left
+			-fold vertically 1/3 from right
+			-flip over
+			-fold in half horizontally
+			-place in dresser
+		elsif dress_shirt
+			place hanger inside
+			place hanger on clothes rod
+		else
+			crumple in ball
+			throw in dresser
+End
+
+
+			
+		

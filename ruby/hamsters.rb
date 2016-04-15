@@ -18,12 +18,17 @@ adoption = gets.chomp.downcase
 	end	
 
 puts "Estimated age in months"
-age = gets.to_i
+age = gets.chomp
 	if age == ""
-		return nil
-	else 
-		return age 	
+		age = nil
+	elsif age.is_a?(String) == true
+		age = age.to_i
+		puts "#{age}" 
+	else
+		puts "please put in an age"		
 	end	
+
+puts "The hamster #{name} has a volume level of #{volume}, and a fur color of #{color}. Its candidacy for adoption is: #{adoption}, and it is #{age} months old."
 
  
 

@@ -1,0 +1,21 @@
+header {
+	background-color: blue;
+}
+
+section {
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+}
+
+.column-1 {
+	background-color: yellow;
+}
+
+.column-2 {
+	background-color: red;
+}
+
+footer {
+	background-color: pink;
+}

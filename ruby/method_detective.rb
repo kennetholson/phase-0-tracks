@@ -32,8 +32,10 @@
 # => "Elementary, my dear Watson!"
 
 # "z".<???>
+
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
+#gives the integer ordinal
 
 # "How many times does the letter 'a' appear in this string?".<???>
 # => 4

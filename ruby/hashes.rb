@@ -9,7 +9,7 @@ puts "Age"
 age = gets.to_i
 
 puts "Number of children"
-children = gets.chomp
+children = gets.to_i
 
 puts "Theme, example country, modern, industrial, beach"
 theme = gets.chomp
@@ -39,3 +39,14 @@ client = {
 	:theme => theme,
 	:pets => pets
 }
+
+p client
+
+puts "Please enter any key you would like to update"
+update = gets.chomp
+	if update == age
+		puts "new age?"
+		 new_age = gets.chomp
+		 age => new_age 
+	else
+end		 

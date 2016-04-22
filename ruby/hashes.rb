@@ -8,9 +8,6 @@ last = gets.chomp
 puts "Age"
 age = gets.to_i
 
-puts "Number of children"
-children = gets.to_i
-
 puts "Theme, example country, modern, industrial, beach"
 theme = gets.chomp
 
@@ -35,18 +32,61 @@ client = {
 	:first => first,
 	:last => last,
 	:age => age,
-	:children => children,
 	:theme => theme,
 	:pets => pets
 }
 
 p client
 
-puts "Please enter any key you would like to update"
+puts "Please enter any key you would like to update or type done"
 update = gets.chomp
-	if update == age
-		puts "new age?"
-		 new_age = gets.chomp
-		 age => new_age 
+	if update == "first"
+		puts "new name"
+		new_first = gets.chomp
+		client = {
+	:first => new_first,
+	:last => last,
+	:age => age,
+	:theme => theme,
+	:pets => pets}
+	elsif update == "last"
+		puts "new last"
+		new_last = gets.chomp
+		client = {
+	:first => first,
+	:last => new_last,
+	:age => age,
+	:theme => theme,
+	:pets => pets}
+	elsif update == "age"
+		puts "new age"
+		new_age = gets.chomp
+		client = {
+	:first => first,
+	:last => last,
+	:age => new_age,
+	:theme => theme,
+	:pets => pets}
+	elsif update == "theme"
+		puts "new theme"
+		new_theme = gets.chomp
+		client = {
+	:first => first,
+	:last => last,
+	:age => age,
+	:theme => new_theme,
+	:pets => pets}
+	elsif update == "pets"
+		puts "new pet response"
+		new_pet = gets.chomp
+		client = {
+	:first => first,
+	:last => last,
+	:age => age,
+	:theme => theme,
+	:pets => new_pet}
 	else
-end		 
+		puts "thank you"
+	puts "thank you"
+end	
+p client	 

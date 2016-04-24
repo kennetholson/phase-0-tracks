@@ -23,7 +23,8 @@ garage = {
 			type: 'Electrical',
 			tools: [
 				"Wire stripper",
-				"Wire nuts"
+				"Wire nuts",
+				"Heat gun"
 			]
 		},
 		right_side:{

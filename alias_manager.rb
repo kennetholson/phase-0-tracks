@@ -1,8 +1,13 @@
 #Ask user for name first  and last name then switch them
+valid_input = false
+until valid_input
+
 puts "Full name?"
 name = gets.chomp
-
-
+if name == "quit"
+	valid_input = true
+	puts "Thank you"
+else	
 
 	vowel = "aeiou"
 	index = 0
@@ -17,8 +22,9 @@ while index < name.length
 	name[index]
 	index = index + 1
 end
-
 puts name
+end
+end
 
 
 

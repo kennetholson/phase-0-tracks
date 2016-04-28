@@ -1,6 +1,6 @@
 #Puppy Class
 
-#Charactoristics
+#Characteristics
 #	Age: 0-2
 #	Name: Varies	
 # 	Size: Small

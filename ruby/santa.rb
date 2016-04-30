@@ -1,5 +1,14 @@
 class Santa
 
+	def initialize(gender, ethnicity)
+		@gender = "gender"
+		@ethnicity = "ethnicity"
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
+		puts "initializing new Santa..."
+	end	
+
+
 	def speak
 		puts "Ho, ho, ho! Happy holidays!" 
 	end
@@ -9,15 +18,15 @@ class Santa
     	
 	end
 
-
-	def initialize
-		puts "initializing new Santa..."
-	end	
 end
 
-Aktos = Santa.new
-#
+santa = Santa.new("Male","Irish")
+santa = Santa.new("Female","Kazakh")
+santa = Santa.new("male","Black")
+santa = Santa.new("Prefer not to say","White")
+santa = Santa.new("transgender","White")
+
 #driver code
 
-Aktos.speak
-Aktos.eat_milk_and_cookies("Peanut Butter")
+santa.speak
+santa.eat_milk_and_cookies("Peanut Butter")

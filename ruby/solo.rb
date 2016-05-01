@@ -36,18 +36,39 @@ class Shark
 
 end	
 
-puts "Sharks name"
-	name = gets.chomp
-puts "Shark Type"
-	type = gets.chomp
-puts "How long is the shark"
-	length = gets.to_i
-puts "Sharks location"
-	location = gets.chomp
-name = Shark.new(type, length, location)
+array = []
 
+valid_input = false
+until valid_input
+	puts "Would you like to add to class y/n"
+		answer = gets.chomp
+	
+	if answer == "n"
+		valid_input = true
+	else	
+		puts "Sharks name"
+			name = gets.chomp
+		puts "Shark Type"
+			type = gets.chomp
+		puts "How long is the shark"
+			length = gets.to_i
+		puts "Sharks location"
+			location = gets.chomp
+	end
+
+array << name = Shark.new(type, length, location)
+end
 name.eat(rand(1..10))
 name.tag
 name.size
 #name.location = "australia"
 #puts "#{name.location}"
+
+array.each do
+	puts "This is a #{name.type} shark,#{name.length} feet long, located near#{name.location}"
+end	
+
+	
+
+
+	

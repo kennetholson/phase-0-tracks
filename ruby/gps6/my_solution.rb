@@ -101,10 +101,10 @@ end
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
-#STATE_DATA.each do |state_name, pop|
-#state = VirusPredictor.new(state_name, STATE_DATA[state_name][:population_density], STATE_DATA[state_name][:population])
-#state.virus_effects
-#end
+STATE_DATA.each do |state_name, pop|
+state = VirusPredictor.new(state_name, STATE_DATA[state_name][:population_density], STATE_DATA[state_name][:population])
+state.virus_effects
+end
   
 jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
 jersey.virus_effects

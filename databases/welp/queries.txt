@@ -1,0 +1,16 @@
+1. command: SELECT reviews.*, businesses.*, users.* FROM reviews JOIN businesses ON businesses.id=reviews.business_id JOIN users ON users.id=reviews.user_id;
+   output: 1|5|Great food!|2|6|2|Amir's Towing|6|Merryl|Streepman
+       2|3|Okay|3|6|3|The Beagle Nightclub|6|Merryl|Streepman
+       3|2|Bad lighting|1|3|1|Grundy Hollow Wedding Chapel|3|Angela|Jolie
+       4|4|Enlightening!|4|1|4|Lotus Yoga|1|Bradford|Pitt
+       5|3|Not the best|6|7|6|Sushi World|7|Denzel|George
+       6|4|Love it!|7|7|7|JoeBob's Sportz Barn|7|Denzel|George
+2. command: SELECT reviews.stars, reviews.comment, businesses.name, users.first_name, users.last_name FROM reviews JOIN businesses ON businesses.id=reviews.business_id JOIN users ON users.id=reviews.user_id;
+   output: 5|Great food!|Amir's Towing|Merryl|Streepman
+       3|Okay|The Beagle Nightclub|Merryl|Streepman
+       2|Bad lighting|Grundy Hollow Wedding Chapel|Angela|Jolie
+       4|Enlightening!|Lotus Yoga|Bradford|Pitt
+       3|Not the best|Sushi World|Denzel|George
+       4|Love it!|JoeBob's Sportz Barn|Denzel|George
+3. command: SELECT reviews.*, businesses.*, users.* FROM reviews JOIN businesses ON businesses.id=reviews.business_id JOIN users ON users.id=reviews.user_id WHERE businesses.id=2;
+   output: 1|5|Great food!|2|6|2|Amir's Towing|6|Merryl|Streepman

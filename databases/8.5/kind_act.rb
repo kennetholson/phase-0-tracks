@@ -29,13 +29,29 @@ todo.execute(create_table)
 #todo.execute("INSERT INTO action (what, day) VALUES ('Day trip to coast', 'Sat or Sun')")
 #todo.execute("INSERT INTO action (what, day) VALUES ('See a live band', 'any')")
 
+#user interface
+
 puts "What week are you on of onsite traing with DBC"
 week = gets.to_i
-# week1 = var[0]
-# p week1[1]
-def progress(todo, week)
-var = todo.execute("SELECT * FROM action")
-real = var[week - 1]
-puts "Don't forget to #{real[1]} on #{real[2]}day"
-end
-p progress(todo, week)
+if week < 10
+	def progress(todo, week)
+	var = todo.execute("SELECT * FROM action")
+	real = var[week - 1]
+	"Don't forget to #{real[1]} on #{real[2]}day for your wife"
+	end
+	p progress(todo, week)
+else 
+	puts "Will you be done this week"
+	done = gets.chomp
+	if done == "yes"
+		puts "Congratulations, take your wife on a trip to celebrate"
+	else 
+		puts "What will you do for your wife this week?"
+		new_do = gets.chomp
+		puts "When"
+		new_day = gets.chomp
+		todo.execute("INSERT INTO action (what, day) VALUES ('#{new_do}', '#{new_day}')")
+		puts "Dont't forget to #{new_do} on #{new_day} for your wife"
+	end	
+
+end	
